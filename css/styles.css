@@ -277,7 +277,7 @@ em {
 
 .hero-cn {
   margin: 6px 0 0;
-  font-size: clamp(20px, 2.6vw, 26px);
+  font-size: clamp(28px, 3.5vw, 36px);
   font-weight: 500;
   color: var(--text-secondary);
   letter-spacing: 0.14em;
