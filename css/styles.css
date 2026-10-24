@@ -1,5 +1,5 @@
 /* ============================================================
-   Ziqian Mo — Academic Homepage v3.1
+   Ziqian Mo — Academic Homepage v3.2
    Apple.com language, denser + uncropped paper teasers
    ============================================================ */
 
@@ -32,6 +32,12 @@
   --font: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display",
     "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  /* Modest global type step-up (v3.2) */
+  --fs-base: 18px;
+  --fs-sm: 15px;
+  --fs-xs: 13px;
+  --fs-2xs: 12px;
+  --fs-micro: 11px;
 }
 
 *,
@@ -54,7 +60,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font);
-  font-size: 17px;
+  font-size: var(--fs-base);
   line-height: 1.47059;
   letter-spacing: -0.022em;
   color: var(--text);
@@ -123,7 +129,7 @@ em {
 }
 
 .nav-brand {
-  font-size: 17px;
+  font-size: var(--fs-base);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -143,7 +149,7 @@ em {
 }
 
 .nav-links a {
-  font-size: 12px;
+  font-size: var(--fs-2xs);
   font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--text);
@@ -193,7 +199,7 @@ em {
   min-height: 40px;
   padding: 0 20px;
   border-radius: 980px;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   font-weight: 400;
   letter-spacing: -0.022em;
   text-decoration: none;
@@ -254,7 +260,7 @@ em {
 
 .hero-eyebrow {
   margin: 0 0 10px;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--text-secondary);
   letter-spacing: -0.01em;
@@ -262,7 +268,7 @@ em {
 
 .hero-name {
   margin: 0;
-  font-size: clamp(44px, 6.8vw, 66px);
+  font-size: clamp(46px, 7vw, 68px);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -271,7 +277,7 @@ em {
 
 .hero-cn {
   margin: 6px 0 0;
-  font-size: clamp(19px, 2.5vw, 25px);
+  font-size: clamp(20px, 2.6vw, 26px);
   font-weight: 500;
   color: var(--text-secondary);
   letter-spacing: 0.14em;
@@ -279,7 +285,7 @@ em {
 
 .hero-tagline {
   margin: 20px 0 0;
-  font-size: clamp(20px, 2.6vw, 26px);
+  font-size: clamp(21px, 2.7vw, 27px);
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.016em;
@@ -289,7 +295,7 @@ em {
 
 .hero-sub {
   margin: 12px 0 0;
-  font-size: 17px;
+  font-size: var(--fs-base);
   line-height: 1.47;
   letter-spacing: -0.016em;
   color: var(--text-secondary);
@@ -306,7 +312,7 @@ em {
 }
 
 .hero-chips li {
-  font-size: 12px;
+  font-size: var(--fs-2xs);
   font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--text);
@@ -368,7 +374,7 @@ em {
 
 .section-label {
   margin: 0 0 8px;
-  font-size: clamp(28px, 4.2vw, 40px);
+  font-size: clamp(30px, 4.4vw, 42px);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -377,7 +383,7 @@ em {
 
 .section-kicker {
   margin: 0 0 28px;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.35;
   letter-spacing: -0.016em;
   color: var(--text-secondary);
@@ -386,12 +392,12 @@ em {
 
 .section-kicker.tight {
   margin-bottom: 20px;
-  font-size: 17px;
+  font-size: var(--fs-base);
 }
 
 .lead {
   margin: 12px 0 0;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.5;
   letter-spacing: -0.016em;
   color: var(--text-secondary);
@@ -429,7 +435,7 @@ em {
 }
 
 .fact-k {
-  font-size: 11px;
+  font-size: var(--fs-micro);
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -437,7 +443,7 @@ em {
 }
 
 .fact-v {
-  font-size: 15px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--text);
   letter-spacing: -0.01em;
@@ -468,7 +474,7 @@ em {
 }
 
 .feature-num {
-  font-size: 12px;
+  font-size: var(--fs-2xs);
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--blue);
@@ -477,7 +483,7 @@ em {
 
 .feature-tile h3 {
   margin: 0 0 10px;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -486,7 +492,7 @@ em {
 
 .feature-tile p {
   margin: 0;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   line-height: 1.47;
   color: var(--text-secondary);
   flex: 1;
@@ -511,7 +517,7 @@ em {
 }
 
 .news-list time {
-  font-size: 13px;
+  font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--text-tertiary);
@@ -530,7 +536,7 @@ em {
   border-radius: 980px;
   background: rgba(0, 113, 227, 0.1);
   color: var(--blue);
-  font-size: 11px;
+  font-size: var(--fs-micro);
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -547,7 +553,7 @@ em {
 
 .news-list p {
   margin: 0;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   line-height: 1.45;
   color: var(--text);
 }
@@ -565,8 +571,8 @@ em {
 }
 
 .pub-card {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: clamp(240px, 38vw, 420px) minmax(0, 1fr);
   align-items: stretch;
   width: 100%;
   background: var(--bg);
@@ -585,14 +591,13 @@ em {
 }
 
 .pub-media {
-  flex: 0 0 clamp(200px, 30vw, 340px);
   background: var(--bg-media);
   /* Paper teasers keep natural aspect — never crop or squash */
   display: grid;
   place-items: center;
   overflow: hidden;
-  padding: 12px 14px;
-  min-height: clamp(168px, 20vw, 224px);
+  padding: 14px 16px;
+  min-height: clamp(200px, 24vw, 280px);
   border-right: 1px solid var(--border-soft);
 }
 
@@ -601,7 +606,7 @@ em {
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: clamp(140px, 18vw, 200px);
+  max-height: clamp(180px, 22vw, 260px);
   object-fit: contain;
   object-position: center;
   transition: transform 0.7s var(--ease-apple);
@@ -612,17 +617,17 @@ em {
 }
 
 .pub-body {
-  padding: 16px 20px 16px;
+  padding: 18px 22px 18px;
   display: flex;
   flex-direction: column;
-  flex: 1;
   min-width: 0;
+  max-width: 38em;
   justify-content: center;
 }
 
 .pub-venue {
   margin: 0 0 6px;
-  font-size: 13px;
+  font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -639,7 +644,7 @@ em {
   border-radius: 980px;
   background: rgba(0, 113, 227, 0.1);
   color: var(--blue);
-  font-size: 11px;
+  font-size: var(--fs-micro);
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -647,7 +652,7 @@ em {
 
 .pub-body h3 {
   margin: 0 0 6px;
-  font-size: 17px;
+  font-size: var(--fs-base);
   font-weight: 600;
   line-height: 1.32;
   letter-spacing: -0.016em;
@@ -666,13 +671,13 @@ em {
 
 .pub-authors {
   margin: 0 0 8px;
-  font-size: 13px;
+  font-size: var(--fs-xs);
   line-height: 1.4;
   color: var(--text-secondary);
 }
 
 .pub-authors .me {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--text);
 }
@@ -685,7 +690,7 @@ em {
 }
 
 .pub-links a {
-  font-size: 13px;
+  font-size: var(--fs-xs);
   font-weight: 500;
   color: var(--blue);
 }
@@ -722,7 +727,7 @@ em {
 }
 
 .honor-list .year {
-  font-size: 13px;
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--text-tertiary);
   font-variant-numeric: tabular-nums;
@@ -730,18 +735,18 @@ em {
 
 .honor-list p {
   margin: 0;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   color: var(--text);
   line-height: 1.4;
 }
 
 .honor-list .note {
   color: var(--text-tertiary);
-  font-size: 13px;
+  font-size: var(--fs-xs);
 }
 
 .honor-list .featured p strong {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 /* ---------- Service ---------- */
@@ -755,7 +760,7 @@ em {
 
 .service-card .year {
   display: block;
-  font-size: 13px;
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--text-tertiary);
   margin-bottom: 8px;
@@ -763,7 +768,7 @@ em {
 
 .service-card p {
   margin: 0;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   line-height: 1.5;
   color: var(--text);
 }
@@ -771,7 +776,7 @@ em {
 /* ---------- Education ---------- */
 .subhead {
   margin: 0 0 14px;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.016em;
   color: var(--text);
@@ -815,7 +820,7 @@ em {
 .edu-list .when,
 .intern-card .when {
   display: block;
-  font-size: 12px;
+  font-size: var(--fs-2xs);
   font-weight: 600;
   color: var(--text-tertiary);
   margin-bottom: 4px;
@@ -825,7 +830,7 @@ em {
 .edu-list p,
 .intern-card p {
   margin: 0;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   line-height: 1.45;
   color: var(--text);
 }
@@ -868,7 +873,7 @@ em {
 
 .contact-title {
   margin: 0;
-  font-size: clamp(36px, 6vw, 56px);
+  font-size: clamp(38px, 6.2vw, 58px);
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.08;
@@ -877,7 +882,7 @@ em {
 
 .contact-copy {
   margin: 12px auto 28px;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.35;
   color: var(--text-secondary);
   max-width: 520px;
@@ -885,7 +890,7 @@ em {
 
 .contact-quiet {
   margin-top: 22px;
-  font-size: 14px;
+  font-size: var(--fs-xs);
   color: var(--text-tertiary);
   display: flex;
   align-items: center;
@@ -907,7 +912,7 @@ em {
 
 .site-footer p {
   margin: 0;
-  font-size: 12px;
+  font-size: var(--fs-2xs);
   color: var(--text-tertiary);
   text-align: center;
 }
@@ -1137,7 +1142,7 @@ em {
   }
 
   .nav-links a {
-    font-size: 17px;
+    font-size: var(--fs-base);
     padding: 14px 0;
     border-bottom: 1px solid var(--border-soft);
     opacity: 1;
@@ -1166,21 +1171,20 @@ em {
   }
 
   .pub-card {
-    flex-direction: row;
-    align-items: stretch;
+    grid-template-columns: 184px minmax(0, 1fr);
   }
 
   .pub-media {
-    flex: 0 0 168px;
-    min-height: 152px;
+    min-height: 160px;
     padding: 10px 12px;
   }
 
   .pub-media img {
-    max-height: 132px;
+    max-height: 148px;
   }
 
   .pub-body {
+    max-width: none;
     padding: 14px 14px 14px 16px;
   }
 
@@ -1209,11 +1213,10 @@ em {
   }
 
   .pub-card {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .pub-media {
-    flex: none;
     width: 100%;
     min-height: 0;
     border-right: none;
@@ -1222,10 +1225,11 @@ em {
   }
 
   .pub-media img {
-    max-height: min(52vw, 220px);
+    max-height: min(56vw, 240px);
   }
 
   .pub-body {
+    max-width: none;
     padding: 14px 16px 16px;
   }
 }
