@@ -573,7 +573,7 @@ em {
 .pub-card {
   display: grid;
   grid-template-columns: clamp(240px, 38vw, 420px) minmax(0, 1fr);
-  align-items: start;
+  align-items: center;
   width: 100%;
   background: var(--bg);
   border-radius: var(--radius-md);
@@ -623,7 +623,7 @@ em {
   flex-direction: column;
   min-width: 0;
   max-width: 38em;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .pub-venue {
@@ -1215,6 +1215,7 @@ em {
 
   .pub-card {
     grid-template-columns: 1fr;
+    align-items: stretch;
   }
 
   .pub-media {
