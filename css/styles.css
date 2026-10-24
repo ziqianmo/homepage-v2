@@ -262,7 +262,7 @@ em {
 
 .hero-name {
   margin: 0;
-  font-size: clamp(42px, 6.5vw, 64px);
+  font-size: clamp(44px, 6.8vw, 66px);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -271,7 +271,7 @@ em {
 
 .hero-cn {
   margin: 6px 0 0;
-  font-size: clamp(18px, 2.4vw, 24px);
+  font-size: clamp(19px, 2.5vw, 25px);
   font-weight: 500;
   color: var(--text-secondary);
   letter-spacing: 0.14em;
@@ -613,11 +613,11 @@ em {
 
 .pub-venue {
   margin: 0 0 8px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--text-tertiary);
+  color: var(--text);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -630,7 +630,7 @@ em {
   border-radius: 980px;
   background: rgba(0, 113, 227, 0.1);
   color: var(--blue);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -664,6 +664,7 @@ em {
 }
 
 .pub-authors .me {
+  font-size: 14px;
   font-weight: 600;
   color: var(--text);
 }
