@@ -1,38 +1,41 @@
-# Ziqian Mo — Academic Homepage (v3.1 · Apple-inspired, denser)
+# Ziqian Mo — Academic Homepage (Jekyll / AcadHomepage)
 
-Static personal academic site for [Ziqian Mo (莫子谦)](https://ziqianmo.github.io/), in the visual language of [apple.com](https://www.apple.com/): soft gray/white bands, SF-like system typography, frosted sticky nav, product-card publications, and scroll motion — tightened in **v3.1** so the page feels fuller and paper teasers are never cropped.
+Jekyll academic homepage for [Ziqian Mo (莫子谦)](https://ziqianmo.github.io/homepage-v2/), based on [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io).
 
-## Preview locally
+This repository is published as a **GitHub Project site** at:
+
+**https://ziqianmo.github.io/homepage-v2/**
+
+The previous Apple-inspired static site from `homepage-v2` is preserved on branch `backup/static-v2-before-swap`.
+
+## Local preview
 
 ```bash
-cd ziqianmo-academic-site-v3
-python3 -m http.server 8080
-# open http://localhost:8080
+bundle install
+bundle exec jekyll serve --livereload --baseurl ""
+# open http://127.0.0.1:4000/
 ```
 
-Also available as `/workspace/ziqianmo-academic-site-v3.zip`.
+To preview with the production subpath:
 
-## v3.1 changes
+```bash
+bundle exec jekyll serve --baseurl "/homepage-v2"
+# open http://127.0.0.1:4000/homepage-v2/
+```
 
-- **Less empty**: tighter section padding, wider content, Hero text+photo side-by-side, About facts rail, 2-column News / Publications, Honors+Service split.
-- **Paper images fixed**: teasers use `object-fit: contain` on a light gray media well with landscape `aspect-ratio` (~2.25:1). No crop, no squash.
-- **Richer rhythm**: focus chips in Hero, venue tags on News rows, denser research tiles.
+## GitHub Pages configuration
 
-## Design
+After merging, ensure **Settings → Pages**:
 
-| Token | Value |
+| Setting | Value |
 | --- | --- |
-| Backgrounds | `#ffffff` / `#f5f5f7` |
-| Media well | `#ebebed` |
-| Text | `#1d1d1f` / `#6e6e73` |
-| Accent | `#0071e3` / `#0066cc` |
-| Type | `system-ui, -apple-system, …` |
-| Nav | frosted sticky `backdrop-filter: blur(20px)` |
+| **Build and deployment → Source** | **GitHub Actions** (not “Deploy from a branch”) |
+| **Custom domain** | *(empty)* |
 
-## Motion
+The workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds with Jekyll (`github-pages` gem) and deploys via `actions/deploy-pages`.
 
-Hero staggered entrance · IO fade/scale reveals · rAF portrait parallax · sticky Research title on desktop · `prefers-reduced-motion` respected.
+`/_config.yml` sets `url: https://ziqianmo.github.io` and `baseurl: /homepage-v2` for correct asset and canonical URLs on the project path.
 
-## Deploy
+## Google Scholar crawler
 
-Copy site contents to the root of `ziqianmo.github.io` (or any static host). No build step.
+Optional workflow [`.github/workflows/google_scholar_crawler.yaml`](.github/workflows/google_scholar_crawler.yaml) from the original user-site repo; configure secrets if you use it.
